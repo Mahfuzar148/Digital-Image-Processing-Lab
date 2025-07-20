@@ -84,7 +84,5 @@ This project is great for students and beginners who want to learn:
 This project is open-source and free to use for **educational and personal learning** purposes.
 Feel free to modify, improve, and share!
 
-```
 
----
 
