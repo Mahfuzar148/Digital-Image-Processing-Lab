@@ -155,6 +155,15 @@ nonlinear-image-transformations-opencv/
 └── README.md                             # Project documentation
 ```
 
+
+
+✅ Highlights of What This Code Does:
+Feature	Description
+Image Loading	Reads a grayscale image using OpenCV
+Normalization	Converts 0–255 pixel values to float values between 0–1
+Gamma Correction	Applies power-law transformation to change brightness contrast
+Log Transformation	Enhances dark pixel regions and compresses brighter ones
+Matplotlib Visualization	Shows all results side by side in a 2×4 layout
 ---
 
 ## 👤 Author
