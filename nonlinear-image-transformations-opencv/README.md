@@ -1,9 +1,8 @@
 
 ---
 
-## 📄 `README.md` (for `nonlinear_transform.py`)
 
-````markdown
+
 # 🌀 Non-Linear Image Transformations with OpenCV (Gamma & Log)
 
 This project demonstrates how to apply **non-linear intensity transformations** — namely **Gamma Correction** and **Logarithmic Transformation** — on grayscale images using Python, OpenCV, NumPy, and Matplotlib.
