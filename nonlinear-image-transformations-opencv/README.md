@@ -62,11 +62,12 @@ gamma_values = [0.1, 0.3, 0.7, 1, 2, 3]
 gamma_imgs = [c * np.power(img_norm, g) for g in gamma_values]
 ```
 
-* Applies gamma transformation:
+- Applies log transformation:
 
   $$
-  s = c \cdot r^\gamma
+  s = c \cdot \log_2(1 + r)
   $$
+
 * γ < 1: brightens image
 * γ > 1: darkens image
 * γ = 1: no change
