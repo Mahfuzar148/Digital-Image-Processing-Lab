@@ -83,7 +83,7 @@ gamma_imgs = [c * np.power(img_norm, g) for g in gamma_values]
 log_img = c * np.log2(1 + img_norm)
 log_img = log_img / np.max(log_img)
 ````
-
+````markdown
 * Applies log transformation:
 
   $$
@@ -94,7 +94,7 @@ log_img = log_img / np.max(log_img)
 
 * Normalized again to ensure proper 0–1 output range.
 
-````
+
 
 ---
 
