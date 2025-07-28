@@ -76,24 +76,28 @@ gamma_imgs = [c * np.power(img_norm, g) for g in gamma_values]
 
 
 
-````markdown
+
 ## 📌 Step 4: Logarithmic Transform
 
 ```python
 log_img = c * np.log2(1 + img_norm)
 log_img = log_img / np.max(log_img)
 ```
-
-- Applies log transformation:
+- **Applies log transformation using the formula:**
 
   $$
   s = c \cdot \log_2(1 + r)
   $$
 
+  where:
+  - \( s \) is the output (log-transformed pixel value),
+  - \( r \) is the normalized input pixel,
+  - \( c \) is a scaling constant.
+
 - Enhances dark pixel values.
 
 - Normalized again to ensure proper 0–1 output range.
-````
+
 
 
 
