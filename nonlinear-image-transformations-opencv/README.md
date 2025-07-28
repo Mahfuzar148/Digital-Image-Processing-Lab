@@ -83,11 +83,8 @@ gamma_imgs = [c * np.power(img_norm, g) for g in gamma_values]
 log_img = c * np.log2(1 + img_norm)
 log_img = log_img / np.max(log_img)
 ```
-- **Applies log transformation using the formula:**
 
-  $$
-  s = c \cdot \log_2(1 + r)
-  $$
+Applies log transformation using the formula: `s = c * log₂(1 + r)`
 
   where:
   - \( s \) is the output (log-transformed pixel value),
