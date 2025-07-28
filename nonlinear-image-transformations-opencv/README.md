@@ -94,7 +94,7 @@ log_img = log_img / np.max(log_img)
 
 * Normalized again to ensure proper 0–1 output range.
 
-
+````
 
 ---
 
