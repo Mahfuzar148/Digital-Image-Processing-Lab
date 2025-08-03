@@ -222,7 +222,3 @@ This is a great starting point for:
 
 
 
-```
-
-Let me know if you'd like this in downloadable `.md` format or need help uploading it to your GitHub repo.
-```
