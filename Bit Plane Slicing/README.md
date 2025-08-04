@@ -96,13 +96,12 @@ pip install numpy matplotlib opencv-python
    * Here, `32`, `64`, and `128` represent the importance of bit positions `5`, `6`, and `7`.
 
 ---
-
 ## 📸 **Input and Output Images**
 
 | Image Type           | Link                                                                                                                                                        |
 | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 🖼️ **Input Image**  | [bit\_plane\_slicing\_input.png](https://github.com/Mahfuzar148/Digital-Image-Processing-Lab/blob/main/Bit%20Plane%20Slicing/bit_plane_slicing_input.png)   |
-| 🖼️ **Output Image** | [bit\_plane\_slicing\_output.png](https://github.com/Mahfuzar148/Digital-Image-Processing-Lab/blob/main/Bit%20Plane%20Slicing/bit_plane_slicing_output.png) |
+| 🖼️ **Input Image**  | [bit_plane_slicing_input.png](https://github.com/Mahfuzar148/Digital-Image-Processing-Lab/blob/main/Bit%20Plane%20Slicing/bit_plane_slicing_input.png)      |
+| 🖼️ **Output Image** | [bit_plane_slicing_output.png](https://github.com/Mahfuzar148/Digital-Image-Processing-Lab/blob/main/Bit%20Plane%20Slicing/bit_plane_slicing_output.png)    |
 
 ---
 
