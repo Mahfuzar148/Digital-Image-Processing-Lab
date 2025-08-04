@@ -98,10 +98,12 @@ pip install numpy matplotlib opencv-python
 ---
 ## 📸 **Input and Output Images**
 
-| Image Type           | Link                                                                                                                                                        |
-| -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 🖼️ **Input Image**  | [bit_plane_slicing_input.png](https://github.com/Mahfuzar148/Digital-Image-Processing-Lab/blob/main/Bit%20Plane%20Slicing/bit_plane_slicing_input.png)      |
-| 🖼️ **Output Image** | [bit_plane_slicing_output.png](https://github.com/Mahfuzar148/Digital-Image-Processing-Lab/blob/main/Bit%20Plane%20Slicing/bit_plane_slicing_output.png)    |
+## 📸 **Input and Output Images**
+
+| 🖼️ Input Image | 🖼️ Output Image |
+| -------------- | --------------- |
+| ![Input Image](https://github.com/Mahfuzar148/Digital-Image-Processing-Lab/blob/main/Bit%20Plane%20Slicing/bit_plane_slicing_input.png?raw=true) | ![Output Image](https://github.com/Mahfuzar148/Digital-Image-Processing-Lab/blob/main/Bit%20Plane%20Slicing/bit_plane_slicing_output.png?raw=true) |
+
 
 ---
 
