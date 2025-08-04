@@ -128,4 +128,103 @@ Bit-Plane Slicing একটি গুরুত্বপূর্ণ টেকন
 
 ---
 
+---
+
+## 🎯 আমরা যা শিখবো:
+
+### 1. Bit-Plane Slicing (Grayscale Image)
+
+* ➕ ছবিকে plane 0 থেকে 7 পর্যন্ত কেটে দেখা
+* ➕ কোন প্লেনে কি থাকে তা বিশ্লেষণ
+
+### 2. Bit-Plane Slicing (Color Image)
+
+* ➕ RGB আলাদা করে 3 টা চ্যানেলেই বিট প্লেন slicing
+
+### 3. Plane Reconstruction
+
+* ➕ শুধু গুরুত্বপূর্ণ planes দিয়ে কিভাবে মূল ছবির structure ফেরত আনা যায়
+
+---
+
+## 🔧 Step 1: Grayscale Bit-Plane Slicing (কোডসহ)
+
+```python
+import cv2
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Step 1: Load grayscale image
+img = cv2.imread('scenery1.png', cv2.IMREAD_GRAYSCALE)
+plt.figure(figsize=(12, 6))
+plt.subplot(2, 5, 1)
+plt.imshow(img, cmap='gray')
+plt.title("Original")
+plt.axis('off')
+
+# Step 2: Extract 8 bit-planes
+for i in range(8):
+    bit_plane = (img >> i) & 1
+    bit_plane_img = bit_plane * 255  # convert binary to visible image
+    plt.subplot(2, 5, i+2)
+    plt.imshow(bit_plane_img, cmap='gray')
+    plt.title(f"Bit Plane {i}")
+    plt.axis('off')
+
+plt.tight_layout()
+plt.show()
+```
+
+📌 **তুমি কি দেখবে?**
+
+* Plane 0 → noise
+* Plane 7 → full structure
+
+---
+
+## 🔧 Step 2: Reconstruction from High Bit-Planes Only
+
+```python
+# Only MSB planes (6,7)
+reconstructed = ((img >> 6) & 1) * 64 + ((img >> 7) & 1) * 128
+
+plt.figure(figsize=(6, 3))
+plt.subplot(1, 2, 1)
+plt.imshow(img, cmap='gray')
+plt.title("Original")
+plt.axis('off')
+
+plt.subplot(1, 2, 2)
+plt.imshow(reconstructed, cmap='gray')
+plt.title("Reconstructed (6+7)")
+plt.axis('off')
+plt.tight_layout()
+plt.show()
+```
+
+---
+
+## 🔧 Step 3: RGB Color Image Plane Slicing
+
+```python
+img = cv2.imread('scenery1.png')
+img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+
+colors = ['Red', 'Green', 'Blue']
+
+for c in range(3):  # loop through channels
+    plt.figure(figsize=(12, 6))
+    for i in range(8):
+        plane = ((img[:, :, c] >> i) & 1) * 255
+        plt.subplot(2, 4, i+1)
+        plt.imshow(plane, cmap='gray')
+        plt.title(f"{colors[c]} Plane {i}")
+        plt.axis('off')
+    plt.suptitle(f"{colors[c]} Channel Bit-Planes", fontsize=16)
+    plt.tight_layout()
+    plt.show()
+```
+
+---
+
 
