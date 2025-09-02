@@ -22,44 +22,39 @@ Write a Python script that:
 
 ```python
 '''
-Problem Statement:
-Write a Python script that loads an RGB image and performs the following transformation:
-g(x, y, c) = f(x, y, c) + constant
-constant = 100
-'''
-
 import matplotlib.pyplot as plt
 import cv2
+import numpy as np
 
 def main():
     #===================== Load the image =========================
-    img_path = "F:/6TH SEMISTER/Python Code/img2.png"
+    img_path = "/home/mohon/4_1/cse4161/images/rgb_flower1.png"
     img_3D = cv2.imread(img_path)    
     img_rgb = cv2.cvtColor(img_3D, cv2.COLOR_BGR2RGB)
-    constant = 100
+    constant = 50
 
     #===================== Apply transformation =========================  
-    img_rgb_transformed = cv2.add(img_rgb, constant)
+    # constant-এর মতো shape এর array বানাতে হবে
+    M = np.full(img_rgb.shape, constant, dtype=np.uint8)
+    img_rgb_transformed = cv2.add(img_rgb, M)   # safe addition (saturation at 255)
 
     #===================== Display the images =========================
     plt.figure(figsize=(10, 10))
-
-    plt.subplot(2, 2, 1)
+    plt.subplot(1, 2, 1)
     plt.imshow(img_rgb)
     plt.title('Original RGB Image') 
-    plt.axis('off')
 
-    plt.subplot(2, 2, 2)
+    plt.subplot(1, 2, 2)
     plt.imshow(img_rgb_transformed)
-    plt.title('Brightness Increased by 100')
-    plt.axis('off')
-
+    plt.title('Transformed RGB Image')
+    
     plt.tight_layout()
     plt.show()
     plt.close()
 
 if __name__ == "__main__":
     main()
+
 ```
 
 ---
