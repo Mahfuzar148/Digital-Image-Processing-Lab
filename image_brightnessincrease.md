@@ -21,7 +21,7 @@ Write a Python script that:
 ## ✅ **Python Code**
 
 ```python
-'''
+
 import matplotlib.pyplot as plt
 import cv2
 import numpy as np
